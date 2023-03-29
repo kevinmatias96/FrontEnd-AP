@@ -2,3 +2,117 @@
 .example-spacer {
     flex: 1 1 auto;
 }
+
+/*******************************/
+/********** Hero CSS ***********/
+/*******************************/
+.hero {
+    position: relative;
+    width: 100%;
+    margin-bottom: 45px;
+    /* padding: 120px 0 0 0; */
+    overflow: hidden;
+    background: linear-gradient(rgba(35, 103, 239, 0.95), rgba(239, 35, 60, .95));
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+}
+
+.hero .container-fluid {
+    padding: 0;
+}
+
+.hero .hero-image {
+    position: relative;
+    text-align: right;
+    padding-right: 75px;
+}
+
+.hero .hero-image img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.hero .hero-content {
+    position: relative;
+    padding-left: 75px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero .hero-text p {
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.hero .hero-text h1 {
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero .hero-text h2 {
+    display: inline-block;
+    margin: 0;
+    height: 35px;
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.hero .hero-text .typed-text {
+    display: none;
+}
+
+.hero .hero-text .typed-cursor {
+    font-size: 35px;
+    font-weight: 300;
+    color: #ffffff;
+}
+
+.hero .hero-btn .btn {
+    margin-top: 35px;
+    color: #EF233C;
+    background: #ffffff;
+    box-shadow: inset 0 0 0 50px #ffffff;
+}
+
+.hero .hero-btn .btn:hover {
+    color: #ffffff;
+    background: transparent;
+    box-shadow: inset 0 0 0 0 #ffffff;
+    border-color: #ffffff;
+}
+
+.hero .hero-btn .btn:first-child {
+    margin-right: 10px;
+}
+
+
+
+/* BRAND IMG - CSS | START */
+.navbar .brand .brand-img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -weblit-transform: translate(-50%, -50%);
+    border: 10px solid white;
+    -webkit-transition: .5s !important;
+    transition: .5s !important;
+    -weblit-transition: .5s !important;
+    z-index: 2;
+    box-shadow: 0 5px 1px rgba(128, 128, 128, 0.13);
+    width: 170px;
+    border-radius: 50%;
+}
+
+/* BRAND IMG - CSS | END */
