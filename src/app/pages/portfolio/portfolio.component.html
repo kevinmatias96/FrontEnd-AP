@@ -110,59 +110,21 @@
             <hr>
         </div>
         
-        <div class="container mb-5">
+        <div *ngFor="let experiencia of _firebaseService.experiencia" class="container mb-5">
             <div class="card mb-3">
                 <div class="row">
                     <div class="col-md-3">
-                        <img src="assets/img/img-01.jpg" class="img-fluid img-thumbnail" alt="...">
+                        <img [src]="experiencia.url" class="img-fluid img-thumbnail" alt="...">
                     </div>
                     <div class="col">
                         <div class="card-body">
-                            <span class="card-title h5">Card title</span>
+                            <span class="card-title h3">{{ experiencia.exp }}</span>
                             <div class="float-end">
                                 <i class="bi bi-pencil-square h5 text-info mx-2"></i>
                                 <i class="bi bi-trash h5 text-danger"></i>
                             </div>
-                        <p class="card-text mt-3">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 5 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-            <div class="card mb-3">
-                <div class="row">
-                    <div class="col-md-3">
-                        <img src="assets/img/img-01.jpg" class="img-fluid img-thumbnail" alt="...">
-                    </div>
-                    <div class="col">
-                        <div class="card-body">
-                            <span class="card-title h5">Card title</span>
-                            <div class="float-end">
-                                <i class="bi bi-pencil-square h5 text-info mx-2"></i>
-                                <i class="bi bi-trash h5 text-danger"></i>
-                            </div>
-                        <p class="card-text mt-3">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 5 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-            <div class="card mb-3">
-                <div class="row">
-                    <div class="col-md-3">
-                        <img src="assets/img/img-01.jpg" class="img-fluid img-thumbnail" alt="...">
-                    </div>
-                    <div class="col">
-                        <div class="card-body">
-                            <span class="card-title h5">Card title</span>
-                            <div class="float-end">
-                                <i class="bi bi-pencil-square h5 text-info mx-2"></i>
-                                <i class="bi bi-trash h5 text-danger"></i>
-                            </div>
-                        <p class="card-text mt-3">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 5 mins ago</small></p>
+                        <p class="card-text mt-3">{{ experiencia.tareas }}</p>
+                        <p class="card-text"><small class="text-muted">{{ experiencia.Nombre }}</small></p>
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from "@angular/common/http";
 
 // servicios
 import { FirebaseService } from "./services/firebase.service"
@@ -10,7 +11,6 @@ import { NavBarComponent } from './shared/nav-bar/nav-bar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { AgregarExperienciaComponent } from './pages/agregar-experiencia/agregar-experiencia.component';
-import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
