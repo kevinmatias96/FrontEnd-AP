@@ -9,9 +9,13 @@ export class FirebaseService {
   experiencia: any = [];
   exp_cargada: boolean = false;
 
+  habilidades: any = [];
+  skill_cargada: boolean = false;
+
   constructor( public http:HttpClient) { 
 
     this.cargaExperiencia();
+    this.cargaAbout();
   }
   
     public cargaExperiencia() {
@@ -27,4 +31,17 @@ export class FirebaseService {
                   })
     }
 
+
+    public cargaAbout() {
+      this.http.get('https://portfolio-ap-48c78-default-rtdb.firebaseio.com/about.json')
+                  .subscribe( datos => {
+                    console.log(datos);
+                    
+                    this.habilidades = datos;
+                    this.skill_cargada = true;
+                    
+                    console.log(this.habilidades[1]);
+                    
+                  })
+    }
 }
