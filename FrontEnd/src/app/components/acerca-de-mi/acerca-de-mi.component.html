@@ -1,0 +1,36 @@
+<section id="about">
+    <div class="container pt-2">
+        <div class="row mb-3">
+            <div class="col-lg-6 col-md-6 mb-4">
+                <div class="">
+                    <img class="img-fluid rounded mx-auto d-block"  src="assets/img/about.jpg" alt="Image">
+                </div>
+            </div>
+    
+            <div class="col">
+                <div>
+                    <span class="h2">Acerca de mí</span>
+                    <button class="btn btn-info float-end">Agregar</button>
+                </div>
+                <div class="about-text mt-4">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida
+                    </p>
+                </div>
+                
+                <!-- HABILIDADES -->
+                <div *ngFor="let habilidad of _firebaseService.habilidades">
+                    <div  class="float-end">
+                        <i class="bi bi-pencil-square h5 text-info mx-2"></i>
+                        <i class="bi bi-trash h5 text-danger"></i>
+                    </div>
+                    <li>{{ habilidad.habilidad }}</li>
+                    <div class="progress mb-4">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Example with label" [ngStyle]="{'width': habilidad.valor}" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{habilidad.valor}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

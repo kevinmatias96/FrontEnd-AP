@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import { FirebaseService } from '../../services/firebase.service';
-import { persona } from '../../model/persona.model';
+import { Component } from '@angular/core';
+import { persona } from 'src/app/model/persona.model';
+import { FirebaseService } from 'src/app/services/firebase.service';
 import { PersonaService } from 'src/app/services/persona.service';
 
 @Component({
-  selector: 'app-portfolio',
-  templateUrl: './portfolio.component.html',
-  styles: [
-  ]
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class PortfolioComponent implements OnInit{
+export class HomeComponent {
   persona: persona = new persona("","", "");
 
   constructor( public _firebaseService: FirebaseService,
@@ -19,5 +18,4 @@ export class PortfolioComponent implements OnInit{
   ngOnInit(): void {
       this._personaService.getPersona().subscribe( data => (this.persona = data))
   }
-
 }

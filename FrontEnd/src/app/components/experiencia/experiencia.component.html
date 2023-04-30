@@ -1,0 +1,28 @@
+<section>
+    <div class="container mb-4 pt-2">        
+        <span class="h2" id="experiencia">Experiencia:</span>
+        <button class="btn btn-info float-end" routerLink="/agregar-experiencia">Agregar</button>
+        <hr>
+    </div>
+    
+    <div *ngFor="let experiencia of _firebaseService.experiencia" class="container mb-5">
+        <div class="card mb-3">
+            <div class="row">
+                <div class="col-md-3">
+                    <img [src]="experiencia.url" class="img-fluid img-thumbnail" alt="...">
+                </div>
+                <div class="col">
+                    <div class="card-body">
+                        <span class="card-title h3">{{ experiencia.exp }}</span>
+                        <div class="float-end">
+                            <i class="bi bi-pencil-square h5 text-info mx-2"></i>
+                            <i class="bi bi-trash h5 text-danger"></i>
+                        </div>
+                    <p class="card-text mt-3">{{ experiencia.tareas }}</p>
+                    <p class="card-text"><small class="text-muted">{{ experiencia.Nombre }}</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
