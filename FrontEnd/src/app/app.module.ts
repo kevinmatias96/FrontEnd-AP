@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from "@angular/common/http";
+import { FormsModule } from '@angular/forms';
 
 // servicios
 import { FirebaseService } from "./services/firebase.service"
@@ -14,6 +15,7 @@ import { ExperienciaComponent } from './components/experiencia/experiencia.compo
 import { EducacionComponent } from './components/educacion/educacion.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -25,11 +27,13 @@ import { HomeComponent } from './pages/home/home.component';
     EducacionComponent,
     FooterComponent,
     HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    FormsModule
   ],
   providers: [
     FirebaseService
