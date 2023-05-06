@@ -16,6 +16,7 @@ import { EducacionComponent } from './components/educacion/educacion.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
+import { interceptorProvider } from './services/interceptor-service';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { LoginComponent } from './pages/login/login.component';
     FormsModule
   ],
   providers: [
-    FirebaseService
+    FirebaseService,
+    interceptorProvider
   ],
   bootstrap: [AppComponent]
 })
