@@ -8,7 +8,6 @@ import { FirebaseService } from "./services/firebase.service"
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AgregarExperienciaComponent } from './pages/agregar-experiencia/agregar-experiencia.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AcercaDeMiComponent } from './components/acerca-de-mi/acerca-de-mi.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
@@ -21,7 +20,6 @@ import { interceptorProvider } from './services/interceptor-service';
 @NgModule({
   declarations: [
     AppComponent,
-    AgregarExperienciaComponent,
     HeaderComponent,
     AcercaDeMiComponent,
     ExperienciaComponent,
